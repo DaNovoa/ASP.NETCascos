@@ -1,0 +1,97 @@
+﻿<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>Casco</h4>
+        <hr />
+        @* Mensaje de éxito si se muestra *@
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success">@TempData["Message"]</div>
+        }
+
+        @* Mostrar errores de validación del modelo *@
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <li>@error.ErrorMessage</li>
+                    }
+                </ul>
+            </div>
+        }
+
+        <input type="hidden" asp-for="IdCasco" />
+
+        <!-- Campos con etiquetas y mensajes de validación -->
+        <div class="form-group">
+            <label asp-for="Talla" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Talla" class="form-control" placeholder="Digita la Talla: S, M, L, XL" />
+                <span asp-validation-for="Talla" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Marca" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Marca" class="form-control" placeholder="Digita la Marca: AGV, MT, SHAFT..." />
+                <span asp-validation-for="Marca" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Comprador" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Comprador" class="form-control" placeholder="Nombre del comprador:" />
+                <span asp-validation-for="Comprador" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Apellido" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Apellido" class="form-control" placeholder="Apellido del comprador:" />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Cedula" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Cedula" class="form-control" placeholder="Cedula del comprador:" />
+                <span asp-validation-for="Cedula" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Precio" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Precio" class="form-control" placeholder="Precio del casco:" />
+                <span asp-validation-for="Precio" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Unidades" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Unidades" class="form-control" placeholder="Unidades a comprar:" />
+                <span asp-validation-for="Unidades" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Fecha" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Fecha" class="form-control" placeholder="Fecha de compra: YYYY-MM-DD" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+</form>

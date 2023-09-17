@@ -1,0 +1,45 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Conexion
+build_property.RootNamespace = Conexion
+build_property.ProjectDir = C:\Users\USUARIO\Desktop\TiendaCascos\TiendaCascos\Conexion\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\USUARIO\Desktop\TiendaCascos\TiendaCascos\Conexion
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/USUARIO/Desktop/TiendaCascos/TiendaCascos/Conexion/Views/Cascos/Detalles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FzY29zXERldGFsbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/Desktop/TiendaCascos/TiendaCascos/Conexion/Views/Cascos/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FzY29zXGVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/Desktop/TiendaCascos/TiendaCascos/Conexion/Views/Cascos/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FzY29zXEVsaW1pbmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/Desktop/TiendaCascos/TiendaCascos/Conexion/Views/Cascos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FzY29zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/Desktop/TiendaCascos/TiendaCascos/Conexion/Views/Cascos/Nueva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FzY29zXE51ZXZhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/Desktop/TiendaCascos/TiendaCascos/Conexion/Views/Shared/ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/Desktop/TiendaCascos/TiendaCascos/Conexion/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

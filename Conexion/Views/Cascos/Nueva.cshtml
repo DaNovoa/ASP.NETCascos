@@ -1,0 +1,88 @@
+﻿    @model Conexion.Models.Cascos
+
+    @{
+        ViewData["Title"] = "Nueva";
+    }
+
+    <h2>Nueva</h2>
+
+    <form asp-action="NuevaAccion">
+        <div class="form-horizontal">
+            <h4>Casco</h4>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Talla" class="control-label"></label>
+                <div>
+                    <input asp-for="Talla" class="form-control" />
+                    <span asp-validation-for="Talla" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Marca" class="control-label"></label>
+                <div>
+                    <input asp-for="Marca" class="form-control" />
+                    <span asp-validation-for="Marca" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Comprador" class="control-label"></label>
+                <div>
+                    <input asp-for="Comprador" class="form-control" />
+                    <span asp-validation-for="Comprador" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Apellido" class="control-label"></label>
+                <div>
+                    <input asp-for="Apellido" class="form-control" />
+                    <span asp-validation-for="Apellido" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Cedula" class="control-label"></label>
+                <div>
+                    <input asp-for="Cedula" class="form-control" />
+                    <span asp-validation-for="Cedula" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Precio" class="control-label"></label>
+                <div>
+                    <input asp-for="Precio" class="form-control" />
+                    <span asp-validation-for="Precio" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Unidades" class="control-label"></label>
+                <div>
+                    <input asp-for="Unidades" class="form-control" />
+                    <span asp-validation-for="Unidades" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <div>
+                    <input asp-for="Fecha" class="form-control" />
+                    <span asp-validation-for="Fecha" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <input type="submit" value="Crear" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </form>
+    <div>
+        <a asp-action="Index">Volver a la lista</a>
+    </div>

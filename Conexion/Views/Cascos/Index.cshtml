@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Conexion.Models.Cascos>
+
+@{
+    ViewData["Title"] = "Lista de Cascos";
+    Layout = "_Layout";
+}
+
+<h2>Lista de Cascos</h2>
+
+<p>
+    <a asp-action="Create" onclick="CrearCascoBtn()" class="btn btn-primary">Crear un nuevo casco</a>
+</p>
+
+@if (Model != null)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID del Casco</th>
+                <th>Talla</th>
+                <th>Marca</th>
+                <th>Comprador</th>
+                <th>Cédula</th>
+                <th>Precio</th>
+                <th>Unidades</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                if (item != null)
+                {
+                    <tr>
+                        <td>@item.IdCasco</td>
+                        <td>@item.Talla</td>
+                        <td>@item.Marca</td>
+                        <td>@(item.Comprador ?? "") @(item.Apellido ?? "")</td>
+                        <td>@item.Cedula</td>
+                        <td>@item.Precio</td>
+                        <td>@item.Unidades</td>
+                        <td>@item.Fecha.ToShortDateString()</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.IdCasco" onclick="DetallesCascoBtn(@item.IdCasco)" class="btn btn-info">Detalles</a>
+                            <a asp-action="Edit" asp-route-id="@item.IdCasco" onclick="editarCascoBtn(@item.IdCasco)" class="btn btn-warning">Editar</a>
+                            <a asp-action="Delete" asp-route-id="@item.IdCasco" onclick="EliminarCascoBtn(@item.IdCasco)" class="btn btn-warning">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            }           
+        </tbody>
+    </table>
+
+    <script>
+        function CrearCascoBtn() {
+            // Redirige al usuario a la acción "Create" en el controlador "Cascos"
+            window.location.href = '@Url.Action("Create", "Cascos")';
+        }
+
+        function DetallesCascoBtn(idCasco) {
+            // Redirige al usuario a la acción "Details" en el controlador "Cascos" con el ID del casco
+            window.location.href = '@Url.Action("Details", "Cascos")/' + idCasco;
+        }
+
+        function editarCascoBtn(idCasco) {
+            // Redirige al usuario a la acción "Edit" en el controlador "Cascos" con el ID del casco
+            window.location.href = '@Url.Action("Edit", "Cascos")/' + idCasco;
+        }
+
+        function EliminarCascoBtn(idCasco) {
+            // Redirige al usuario a la acción "Delete" en el controlador "Cascos" con el ID del casco
+            window.location.href = '@Url.Action("Delete", "Cascos")/' + idCasco;
+        }
+    </script>
+}

@@ -1,0 +1,18 @@
+﻿@model Conexion.Models.Cascos
+
+@{
+    ViewData["Title"] = "Eliminar Casco";
+}
+
+<h2>Eliminar Casco</h2>
+
+<form asp-action="DeleteConfirmed" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <p>¿Estás seguro de que deseas eliminar este casco?</p>
+        <input type="hidden" asp-for="IdCasco" />
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a asp-action="Index">Cancelar</a>
+    </div>
+</form>

@@ -1,0 +1,32 @@
+﻿@model Conexion.Models.Cascos
+
+@{
+    ViewData["Title"] = "Detalles del Casco";
+}
+
+<h2>Detalles del Casco</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>ID del Casco:</dt>
+        <dd>@Model.IdCasco</dd>
+        <dt>Talla:</dt>
+        <dd>@Model.Talla</dd>
+        <dt>Marca:</dt>
+        <dd>@Model.Marca</dd>
+        <dt>Comprador:</dt>
+        <dd>@Model.Comprador @Model.Apellido</dd>
+        <dt>Cédula:</dt>
+        <dd>@Model.Cedula</dd>
+        <dt>Precio:</dt>
+        <dd>@Model.Precio</dd>
+        <dt>Unidades:</dt>
+        <dd>@Model.Unidades</dd>
+        <dt>Fecha:</dt>
+        <dd>@Model.Fecha.ToShortDateString()</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>
